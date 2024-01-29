@@ -10,62 +10,93 @@ public class Pojisteny {
      */
     private String prijmeni;
     /**
-     * věk
+     * Věk
      */
     private int vek;
     /**
-     * telefonní číslo
+     * Telefonní číslo
      */
-    private String cislo; //dát na private a vytvořit getter // pokud bych upravovala nastavím setter
+    private String telefonniCislo;
 
     /**
-     * Inicializuje instanci
+     * Inicializuje instanci Pojištěného
      *
-     * @param jmeno    Jméno
-     * @param prijmeni Příjmení
-     * @param vek      Věk
-     * @param cislo    Číslo
+     * @param jmeno          Jméno
+     * @param prijmeni       Příjmení
+     * @param vek            Věk
+     * @param telefonniCislo Telefonní číslo
      */
-    public Pojisteny(String jmeno, String prijmeni, int vek, String cislo) {
+    public Pojisteny(String jmeno, String prijmeni, int vek, String telefonniCislo) {
         setJmeno(jmeno);
         setPrijmeni(prijmeni);
         setVek(vek);
-        setCislo(cislo);
+        setTelefonniCislo(telefonniCislo);
     }
 
+    /**
+     * vrací jméno pojištěného
+     */
     public String getJmeno() {
         return jmeno;
     }
+
+    /**
+     * vrací přijmení pojištěného
+     */
     public String getPrijmeni() {
         return prijmeni;
     }
+
+    /**
+     * vrací věk pojištěného
+     */
     public int getVek() {
         return vek;
     }
-    public String getCislo() {
-        return cislo;
+
+    /**
+     * vrací telefonní číslo pojištěného
+     */
+    public String getTelefonniCislo() {
+        return telefonniCislo;
     }
+
+    /**
+     * nastaví jméno pojištěného
+     */
 
     public void setJmeno(String jmeno) {
         this.jmeno = jmeno;
     }
 
+    /**
+     * nastaví přijmení pojištěného
+     */
     public void setPrijmeni(String prijmeni) {
         this.prijmeni = prijmeni;
     }
+
+    /**
+     * nastaví věk pojištěného
+     */
     public void setVek(int vek) {
         this.vek = vek;
     }
-    public void setCislo(String cislo) {
-        this.cislo = cislo;
+
+    /**
+     * nastaví telefonní číslo pojištěného
+     */
+    public void setTelefonniCislo(String telefonniCislo) {
+        this.telefonniCislo = telefonniCislo;
     }
+
     /**
      * Pojištěný zformátovaný
-     * Vypíše ve tvaru jméno přijmení věk   číslo
+     * Vypíše ve tvaru jméno    přijmení    věk     telefonní číslo
      */
     @Override
     public String toString() {
-        return jmeno + " " + prijmeni + " " + vek + "   " + cislo;
+        return jmeno + "    " + prijmeni + "    " + vek + "     " + telefonniCislo;
     }
 }
 
